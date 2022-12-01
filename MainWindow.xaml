@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfTilausDB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTilausDB"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="1000">
+    <Grid>
+        <Frame x:Name="Page" Content="" HorizontalAlignment="Left" Height="449" Margin="175,27,0,0" VerticalAlignment="Top" Width="800" NavigationUIVisibility="Hidden"/>
+        <Button x:Name="BtmTilaus" Content="Tilaukset" HorizontalAlignment="Left" Height="60" Margin="23,27,0,0" VerticalAlignment="Top" Width="130" FontSize="20" Click="BtmTilaus_Click"/>
+        <Button x:Name="BtnAsiakkaat" Content="Asiakkaat" HorizontalAlignment="Left" Height="60" Margin="23,127,0,0" VerticalAlignment="Top" Width="130" FontSize="20" Click="BtnAsiakkaat_Click"/>
+        <Button x:Name="BtnTuotteet" Content="Tuotteet" HorizontalAlignment="Left" Height="60" Margin="23,227,0,0" VerticalAlignment="Top" Width="130" FontSize="20" Click="BtnTuotteet_Click"/>
+    </Grid>
+</Window>
