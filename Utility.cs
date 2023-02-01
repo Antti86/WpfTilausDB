@@ -61,10 +61,28 @@ namespace WpfTilausDB
             }
             return list;
         }
+        static public List<Postitoimipaikat> HaePostitoimipaikat(TilausDBEntities entity)
+        {
+            var items = from i in entity.Postitoimipaikat
+                        select i;
+            List<Postitoimipaikat> list = new List<Postitoimipaikat>();
 
+
+            foreach (var k in items)
+            {
+                Postitoimipaikat t = new Postitoimipaikat()
+                {
+                    Postinumero = k.Postinumero,
+                    Postitoimipaikka = k.Postitoimipaikka
+                };
+
+                list.Add(t);
+            }
+            return list;
+        }
         static public int HaeTilausnumero(TilausDBEntities entity)
         {
-            if (entity.Tilaukset.Count() == 0)  //Ei testattu!!
+            if (entity.Tilaukset.Count() == 0) 
             {
                 return 100000;
             }
@@ -79,7 +97,7 @@ namespace WpfTilausDB
 
         static public int HaeTilausRivinumero(TilausDBEntities entity)
         {
-            if (entity.Tilausrivit.Count() == 0)  //Ei testattu!!
+            if (entity.Tilausrivit.Count() == 0) 
             {
                 return 100000;
             }

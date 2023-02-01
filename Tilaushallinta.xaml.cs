@@ -23,6 +23,7 @@ namespace WpfTilausDB
     public partial class Tilaushallinta : Page
     {
         TilausDBEntities entity = new TilausDBEntities();
+
         List<Asiakkaat> asiakaslista = new List<Asiakkaat>();
         List<Tuotteet> tuotelista = new List<Tuotteet>();
 
@@ -36,21 +37,21 @@ namespace WpfTilausDB
             InitializeComponent();
 
 
-            tuotelista = Utility.HaeTuotteet(entity);
-            Utility.SetComboBox(tuotelista, CmbTuotteet);
+            tuotelista = Utility.HaeTuotteet(entity);   //Tallenetaan kaikki tuotteet listaan tietokannasta
+            Utility.SetComboBox(tuotelista, CmbTuotteet);   //Asetetaan tuotteet Combo Boxiin
 
-            asiakaslista = Utility.HaeAsiakkaat(entity);
-            Utility.SetComboBox(asiakaslista, CmbAsiakkaat);
+            asiakaslista = Utility.HaeAsiakkaat(entity);    //Tallenetaan kaikki asiakaat listaan tietokannasta
+            Utility.SetComboBox(asiakaslista, CmbAsiakkaat);    //Asetetaan asiakkaat Combo Boxiin
 
-            tilausriviID = Utility.HaeTilausRivinumero(entity);
+            tilausriviID = Utility.HaeTilausRivinumero(entity); //Haetaan ja tallenetaan seuraava tilausrivi
 
 
             TxtTuoMaara.Text = "1";
 
-            DatTilaus.SelectedDate = DateTime.Now;
+            DatTilaus.SelectedDate = DateTime.Now;              //Asetetaan oletus tilaus ja toimitus päivät
             DatToimitus.SelectedDate = DateTime.Now.AddDays(3);
 
-            DgRiviLista.ItemsSource = GridinTuotteet;
+            DgRiviLista.ItemsSource = GridinTuotteet;           //Asetetaan Datagridin tietolähde
         }
         private void CmbAsiakkaat_DropDownClosed(object sender, EventArgs e)
         {
@@ -234,8 +235,12 @@ namespace WpfTilausDB
 
         private void BtnPoistaRivi_Click(object sender, RoutedEventArgs e)
         {
-            GridinTuotteet.Remove(GridinTuotteet.Last());
-            DgRiviLista.Items.Refresh();
+            if (GridinTuotteet.Count != 0)
+            {
+                GridinTuotteet.Remove(GridinTuotteet.Last());
+                DgRiviLista.Items.Refresh();
+            }
+
         }
     }
 }

@@ -75,6 +75,9 @@
     <Compile Include="Henkilot.cs">
       <DependentUpon>TilausDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Postinumerot.xaml.cs">
+      <DependentUpon>Postinumerot.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Postitoimipaikat.cs">
       <DependentUpon>TilausDB.tt</DependentUpon>
     </Compile>
@@ -123,6 +126,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Postinumerot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Tilaushallinta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

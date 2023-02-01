@@ -8,8 +8,9 @@
         Title="MainWindow" Height="550" Width="1000">
     <Grid>
         <Frame x:Name="Page" Content="" HorizontalAlignment="Left" Height="449" Margin="175,27,0,0" VerticalAlignment="Top" Width="800" NavigationUIVisibility="Hidden"/>
-        <Button x:Name="BtmTilaus" Content="Tilaukset" HorizontalAlignment="Left" Height="60" Margin="23,27,0,0" VerticalAlignment="Top" Width="130" FontSize="20" Click="BtmTilaus_Click"/>
-        <Button x:Name="BtnAsiakkaat" Content="Asiakkaat" HorizontalAlignment="Left" Height="60" Margin="23,127,0,0" VerticalAlignment="Top" Width="130" FontSize="20" Click="BtnAsiakkaat_Click"/>
-        <Button x:Name="BtnTuotteet" Content="Tuotteet" HorizontalAlignment="Left" Height="60" Margin="23,227,0,0" VerticalAlignment="Top" Width="130" FontSize="20" Click="BtnTuotteet_Click"/>
+        <Button x:Name="BtmTilaus" Content="Tilaukset" HorizontalAlignment="Left" Height="60" Margin="15,27,0,0" VerticalAlignment="Top" Width="147" FontSize="20" Click="BtmTilaus_Click"/>
+        <Button x:Name="BtnAsiakkaat" Content="Asiakkaat" HorizontalAlignment="Left" Height="60" Margin="15,127,0,0" VerticalAlignment="Top" Width="147" FontSize="20" Click="BtnAsiakkaat_Click"/>
+        <Button x:Name="BtnTuotteet" Content="Tuotteet" HorizontalAlignment="Left" Height="60" Margin="15,227,0,0" VerticalAlignment="Top" Width="147" FontSize="20" Click="BtnTuotteet_Click"/>
+        <Button x:Name="BtnPostitoimipaikat" Content="Postitoimipaikat" HorizontalAlignment="Left" Height="60" Margin="15,327,0,0" VerticalAlignment="Top" Width="147" FontSize="20" Click="BtnPostitoimipaikat_Click"/>
     </Grid>
 </Window>

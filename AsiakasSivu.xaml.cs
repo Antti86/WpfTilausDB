@@ -20,9 +20,45 @@ namespace WpfTilausDB
     /// </summary>
     public partial class AsiakasSivu : Page
     {
+        TilausDBEntities entity = new TilausDBEntities();
+
+        List<Asiakkaat> asiakaslista = new List<Asiakkaat>();
         public AsiakasSivu()
         {
             InitializeComponent();
+
+            asiakaslista = Utility.HaeAsiakkaat(entity);
+
+            DgAsiakaslista.ItemsSource = asiakaslista;
+
+            
+
+            
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+            //if (DgAsiakaslista.SelectedItem != null)
+            //{
+            //    Asiakaat test = DgAsiakaslista.SelectedItem;
+
+            //    Asiakkaat t = new Asiakkaat()
+            //    {
+            //        DgAsiakaslista.SelectedItem.
+            //    };
+            //    //https://stackoverflow.com/questions/19225568/wpf-datagrid-get-selected-cell-value
+
+            //    int test2 = 0;
+                
+            //    //int index = asiakaslista.FindIndex
+            //    //    (x => x.Nimi == DgAsiakaslista.SelectedItem.ToString());
+
+            //    //asiakaslista.Remove(asiakaslista[index]);
+            //}
+
+
+
         }
     }
 }

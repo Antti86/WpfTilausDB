@@ -9,6 +9,18 @@
       Title="AsiakasSivu">
 
     <Grid Background="#FFDDDDDD">
-        
+        <DataGrid x:Name="DgAsiakaslista" HorizontalAlignment="Left" Height="408" Margin="409,10,0,0" VerticalAlignment="Top" Width="367" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Button x:Name="BtnDelete" Content="Poista" HorizontalAlignment="Left" Height="55" Margin="34,363,0,0" VerticalAlignment="Top" Width="91" Click="BtnDelete_Click"/>
+        <TextBox x:Name="TxtAsiakasOsoite" HorizontalAlignment="Left" Height="40" Margin="34,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
+        <TextBox x:Name="TxtAsiakasNimi" HorizontalAlignment="Left" Height="40" Margin="34,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
+        <TextBox x:Name="TxtAsiakasPostinumero" HorizontalAlignment="Left" Height="40" Margin="34,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
+        <Label x:Name="LblAsiakasNimi" Content="Nimi" HorizontalAlignment="Left" Height="35" Margin="34,10,0,0" VerticalAlignment="Top" Width="156"/>
+        <Label x:Name="LblAsiaksOsoite" Content="Osoite" HorizontalAlignment="Left" Height="35" Margin="34,95,0,0" VerticalAlignment="Top" Width="156"/>
+        <Label x:Name="LblPostitoimiPaikka" Content="Postitoimipaikka" HorizontalAlignment="Left" Height="35" Margin="34,175,0,0" VerticalAlignment="Top" Width="156"/>
+        <Button x:Name="BtnLisaaAsiakas" Content="Lisää" HorizontalAlignment="Left" Height="55" Margin="34,273,0,0" VerticalAlignment="Top" Width="91"/>
+        <Button x:Name="BtnTalenna" Content="Talenna" HorizontalAlignment="Left" Height="55" Margin="184,273,0,0" VerticalAlignment="Top" Width="91"/>
+        <TextBox x:Name="TxtAsiakasId" HorizontalAlignment="Left" Height="40" Margin="230,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77"/>
+        <Label x:Name="LblAsiakasId" Content="Asiakas.Nmr" HorizontalAlignment="Left" Height="30" Margin="230,20,0,0" VerticalAlignment="Top" Width="76"/>
+
     </Grid>
 </Page>

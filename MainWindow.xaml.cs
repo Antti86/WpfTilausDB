@@ -23,6 +23,7 @@ namespace WpfTilausDB
     {
         Tilaushallinta tilaushallinta = new Tilaushallinta();
         AsiakasSivu asiakasSivu = new AsiakasSivu();
+        Postinumerot postinumerot = new Postinumerot();
         public MainWindow()
         {
             InitializeComponent();
@@ -45,6 +46,11 @@ namespace WpfTilausDB
         private void BtnTuotteet_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void BtnPostitoimipaikat_Click(object sender, RoutedEventArgs e)
+        {
+            Page.NavigationService.Navigate(postinumerot);
         }
     }
 }
